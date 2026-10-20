@@ -6,7 +6,7 @@ Tollgate sits between agents and the tools and models they use. It identifies ev
 
 ## The problem and the decision
 
-_To be written with ADR-001 (Day 1): why a control plane, and why not adopt an existing gateway._
+Existing MCP gateways route and secure tool calls well, but none of those reviewed combines durable human approval of risky calls, a tamper-evident audit record of every tool call, and cost attribution by user, agent, tool and task. Tollgate is a small control plane built around those three capabilities, reusing proven components for everything else. See [ADR-001](docs/adr/0001-why-a-control-plane.md) for the options considered, including ContextForge and agentgateway.
 
 ## Architecture
 
@@ -46,7 +46,7 @@ _Mapped in Week 10._
 
 | # | Decision | Status |
 |---|---|---|
-| 001 | Why a control plane, why not an existing gateway | Planned |
+| [001](docs/adr/0001-why-a-control-plane.md) | Build a small control plane instead of adopting an existing MCP gateway | Accepted |
 
 ## Licences and why
 
